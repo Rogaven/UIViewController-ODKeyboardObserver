@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="D5o-5W-F2O">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="h9i-Qj-ZfJ">
+            <objects>
+                <navigationController id="D5o-5W-F2O" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Mxt-zx-w1v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.98039215690000003" green="0.79607843140000001" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.84313725490000002" green="0.054901960780000002" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iwv-rM-LBE" kind="relationship" relationship="rootViewController" id="Wvz-4x-RxQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="THK-hf-bDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-241.59999999999999" y="178.91999999999999"/>
+        </scene>
+        <!--ODX-->
+        <scene sceneID="YsK-H2-Fnn">
+            <objects>
+                <viewController id="iwv-rM-LBE" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RIY-k2-dhR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input field" textAlignment="center" minimumFontSize="17" id="Ftt-Pj-YQv">
+                                <rect key="frame" x="20" y="518" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ovr-dg-GGm">
+                                <rect key="frame" x="20" y="300" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.79607843140000001" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Alert">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="alertAction:" destination="iwv-rM-LBE" eventType="touchUpInside" id="mTH-Tv-cuk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="ODX" id="hDl-aU-ANH">
+                        <barButtonItem key="leftBarButtonItem" title="Hide" style="done" id="aWg-6s-CHC">
+                            <color key="tintColor" red="0.98039215690000003" green="0.79607843140000001" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="hideAction:" destination="iwv-rM-LBE" id="1b0-K7-lb9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="TableVC" style="done" id="WXJ-DP-HCF">
+                            <color key="tintColor" red="0.98039215690000003" green="0.79607843140000001" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="alertAction:" destination="iwv-rM-LBE" id="gy0-x6-f6n"/>
+                                <segue destination="P83-tv-2W5" kind="push" id="8o4-RP-AAk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="_alertButton" destination="ovr-dg-GGm" id="IVG-bp-oop"/>
+                        <outlet property="_field" destination="Ftt-Pj-YQv" id="wYF-3z-qT7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lZX-1v-5Ws" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118" y="178"/>
+        </scene>
+        <!--ODX-->
+        <scene sceneID="iN9-pJ-m4S">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ES-7M-bxt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fq4-1l-Ei7">
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" red="0.98039215690000003" green="0.79607843140000001" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Alert">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="alertAction:" destination="P83-tv-2W5" eventType="touchUpInside" id="2Xt-Lp-cK1"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input field" textAlignment="center" minimumFontSize="17" id="llb-VC-n7j">
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                </textField>
+                <viewController id="P83-tv-2W5" customClass="TableViewController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="ODX" id="vhT-n5-Ejj">
+                        <barButtonItem key="rightBarButtonItem" title="Hide" style="done" id="lor-ls-hnN">
+                            <color key="tintColor" red="0.98039215690000003" green="0.79607843140000001" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="hideAction:" destination="P83-tv-2W5" id="RVI-Wq-zsX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="_alertButton" destination="Fq4-1l-Ei7" id="fC7-9g-Gja"/>
+                        <outlet property="_field" destination="llb-VC-n7j" id="sA8-Xy-z4v"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="531" y="178"/>
+        </scene>
+    </scenes>
+</document>
